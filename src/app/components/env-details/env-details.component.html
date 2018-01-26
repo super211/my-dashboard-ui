@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-sm-12">
+  <a routerLink="home" class="badge badge-success pull-right"></a>
+</div>
+</div>
+<div class="row">
+    <div class="col-sm-2">
+        <table *ngIf="envHomeView!==undefined"  class="table table-condesed table-bordered">
+            <tr *ngFor="let envSummary of envHomeView.envInfos | keys" style="width:100px;">
+              <td><span>{{envSummary.key}}</span>
+          
+                <table class="table table-bordered">
+                  <tr>
+                    <td>
+                      <a class="badge badge-info" (click)="fetchDetails(envDtl.key)" *ngFor="let envDtl of envSummary.value.serverDetails | keys">{{envDtl.key}}</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr> 
+          
+          </table>
+    </div>
+    <div class="col-sm-10" *ngIf="envDtlView!==undefined">
+      <table class="table table-bordered table-condensed" *ngFor="let envDtl of envDtlView">
+        <thead>
+          <th colspan="2">
+          <span>{{envDtl.environmentName}} - {{envDtl.productName}}</span>
+          </th>
+        </thead>
+        <tbody>
+          <tr><td style="width:200px">Product Name</td><td>{{envDtl.productName}}</td></tr>
+          <tr><td>Environement Name</td><td>{{envDtl.environmentName}}</td></tr>
+          <tr><td>Product Category</td><td>{{envDtl.productCategory}}</td></tr>
+          <tr><td>Development Stream</td><td>{{envDtl.developmentStream}}</td></tr>
+          <tr><td>Assigned To</td><td>{{envDtl.assignedTo}}</td></tr>
+          <tr><td>Host Name</td><td>{{envDtl.hostname}}</td></tr>
+          <tr><td>abc</td><td></td></tr>
+        </tbody>
+      </table>
+      </div>
+</div>
