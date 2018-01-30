@@ -21,6 +21,7 @@ import { Http, XHRBackend, RequestOptions } from '@angular/http';
 import { EnvDetailsComponent } from './components/env-details/env-details.component';
 import { PageDrop } from "./components/page-header/page-drop.component";
 import { ProductService } from "./services/product.service";
+import { Port1Service } from "./services/port1.service";
 import { PopupModule } from 'ng2-opd-popup';
 
 @NgModule({
@@ -46,7 +47,7 @@ import { PopupModule } from 'ng2-opd-popup';
     PopupModule.forRoot(),
     InMemoryWebApiModule.forRoot(AppInMemoryDbService, { passThruUnknownUrl: true })
   ],
-  providers: [ProductService],
+  providers: [ProductService, Port1Service],
   bootstrap: [AppComponent]
 })
 export class AppModule {

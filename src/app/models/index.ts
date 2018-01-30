@@ -60,4 +60,28 @@ export class ComInfo{
   componentname:string;
   ip:string;
   env:string;
+  regNo:number;
+  perNo:number;
+  staNo:number;
+  prodNo:number;
 }
+
+export class Port1 {
+    id: number;
+    name: string;
+    component: Map<string,Port1Info>;
+  
+    constructor() {
+      this.name = "";
+    }
+  }
+  
+  export class Port1Info{
+    id:number;
+    componentname:string;
+    devNo:number;
+    sitNo:number;
+    uatNo:number;
+    ptNo:number;
+    drhNo:number;
+  }

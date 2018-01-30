@@ -37,12 +37,18 @@ export class AppInMemoryDbService implements InMemoryDbService {
     ];
 
     let products = [
-      {id: 1, name: 'TAP', component: [{id: 1, componentname: 'OCS', ip: '1.1.1.1', env: 'env1'}]},
-      {id: 2, name: 'T24', component: [{id: 1, componentname: 'APP', ip: '1.1.1.2', env: 'env1'}]},
-      {id: 3, name: 'TDS', component: [{id: 1, componentname: 'TCIB', ip: '1.1.1.3', env: 'env1'}]}
+      {id: 1, name: 'TAP', component: [{id: 1, componentname: 'OCS', ip: '1.1.1.1', env: 'env1', regNo:1, perNo:2, staNo:3, prodNo:2}]},
+      {id: 2, name: 'T24', component: [{id: 1, componentname: 'APP', ip: '1.1.1.2', env: 'env1', regNo:2, perNo: 2, staNo:1, prodNo:2}]},
+      {id: 3, name: 'TDS', component: [{id: 1, componentname: 'TCIB', ip: '1.1.1.3', env: 'env1', regNo:3, perNo: 1, staNo:1, prodNo:2}]}
     ];
 
-    return {loginusers, environments, serverinfos, products};
+    let port1 = [
+      {id: 1, name: 'TAP', component: [{id: 1, componentname: 'OCS', devNo: 2, sitNo: 3, uatNo:2, ptNo:1, drhNo:2}]},
+      {id: 2, name: 'TAP', component: [{id: 1, componentname: 'OCS', devNo: 1, sitNo: 2, uatNo:1, ptNo:3, drhNo:1}]},
+      {id: 3, name: 'TAP', component: [{id: 1, componentname: 'OCS', devNo: 2, sitNo: 1, uatNo:3, ptNo:2, drhNo:1}]}
+    ];
+
+    return {loginusers, environments, serverinfos, products, port1};
   }
 
 }

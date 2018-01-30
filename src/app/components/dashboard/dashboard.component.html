@@ -254,8 +254,8 @@
             <td>{{product.component[0].componentname}}</td>
             <td>{{product.component[0].ip}}</td>
             <td>{{product.component[0].env}}</td>
-          </tr>
-          <span>{{products[0].name}}</span>
+          </tr> -->
+          <!-- <span>{{products[0].name}}</span>
           <span>{{products[0].component[0].componentname}}</span> -->
         </div>
         <div class="col-sm-10">
@@ -265,7 +265,8 @@
             </tr>
           </table>-->
           <div class="table-responsive">
-            <table *ngIf="envHomeView!==undefined" class="table table-bordered table-condensed table-large-text">
+            <!-- <table *ngIf="envHomeView!==undefined" class="table table-bordered table-condensed table-large-text"> -->
+            <table class="table table-bordered table-condensed table-large-text">
               <thead>
                 <tr>
                   <th>System</th>
@@ -276,7 +277,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <!-- <tr>
                   <td class="system">TAP</td>
                   <td>
                     <ul class="list-group">
@@ -328,6 +329,192 @@
                   <td>
                     <span class="badge badge-info">{{envHomeView.envInfos["ddb"].totalEnvironments}}</span>
                   </td>
+                </tr> -->
+                <!-- <tr *ngFor="let product of products">
+                  <td>{{product.name}}</td>
+                  <td>
+                    <span class="badge badge-info">{{product.component[0].regNo}}</span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{product.component[0].perNo}}</span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{product.component[0].staNo}}</span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{product.component[0].prodNo}}</span>
+                  </td>
+                </tr> -->
+                <tr>
+                  <td>
+                    <span>{{products[0].name}}</span>
+                    <span class="align-right">
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton(null)">
+                        <i class="fa fa-plus"></i>
+                      </button>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{products[0].component[0].regNo}}</span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{products[0].component[0].perNo}}</span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{products[0].component[0].staNo}}</span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{products[0].component[0].prodNo}}</span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span>{{products[1].name}}</span>
+                    <span class="align-right">
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickAnotherButton(null)">
+                        <i class="fa fa-plus"></i>
+                      </button>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{products[1].component[0].regNo}}</span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{products[1].component[0].perNo}}</span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{products[1].component[0].staNo}}</span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{products[1].component[0].prodNo}}</span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span>{{products[2].name}}</span>
+                    <span class="align-right">
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickOtherButton(null)">
+                        <i class="fa fa-plus"></i>
+                      </button>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{products[2].component[0].regNo}}</span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{products[2].component[0].perNo}}</span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{products[2].component[0].staNo}}</span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="badge badge-info">{{products[2].component[0].prodNo}}</span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                    <span>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton2(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -377,18 +564,23 @@
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["NA"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].devNo}}</span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["DEV"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].sitNo}}</span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["UAT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].uatNo}}</span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["PreProd"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].ptNo}}</span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["SIT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].drhNo}}</span>
                   </td>
                 </tr>
                 <tr>
@@ -402,18 +594,23 @@
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["NA"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].devNo}}</span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["DEV"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].sitNo}}</span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["UAT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].uatNo}}</span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["PreProd"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].ptNo}}</span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["SIT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].drhNo}}</span>
                   </td>
                 </tr>
                 <tr>
@@ -427,18 +624,23 @@
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["NA"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].devNo}}</span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["DEV"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].sitNo}}</span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["UAT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].uatNo}}</span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["PreProd"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].ptNo}}</span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["SIT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].drhNo}}</span>
                   </td>
                 </tr>
               </tbody>
@@ -482,105 +684,90 @@
                   <td class="system">
                     <span>TAP</span>
                     <span class="align-right">
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="showPlayerForm(null)">
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton(null)">
                         <i class="fa fa-plus"></i>
                       </button>
                     </span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">12</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["NA"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].devNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">66</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["DEV"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].sitNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">17</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["UAT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].uatNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">13</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["PreProd"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].ptNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">19</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["SIT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].drhNo}}</span>
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <span>T24</span>
                     <span class="align-right">
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="showPlayerForm(null)">
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickAnotherButton(null)">
                         <i class="fa fa-plus"></i>
                       </button>
                     </span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">16</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["NA"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].devNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">2</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["DEV"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].sitNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">6</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["UAT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].uatNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">12</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["PreProd"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].ptNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">86</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["SIT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].drhNo}}</span>
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <span>TDS</span>
                     <span class="align-right">
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="showPlayerForm(null)">
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickOtherButton(null)">
                         <i class="fa fa-plus"></i>
                       </button>
                     </span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">12</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["NA"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].devNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">67</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["DEV"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].sitNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">91</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["UAT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].uatNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">13</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["PreProd"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].ptNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">27</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["SIT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].drhNo}}</span>
                   </td>
                 </tr>
               </tbody>
@@ -624,105 +811,90 @@
                   <td class="system">
                     <span>TAP</span>
                     <span class="align-right">
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="showPlayerForm(null)">
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickButton(null)">
                         <i class="fa fa-plus"></i>
                       </button>
                     </span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">93</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["NA"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].devNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">12</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["DEV"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].sitNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">24</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["UAT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].uatNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">63</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["PreProd"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].ptNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">16</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["SIT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[2].component[0].drhNo}}</span>
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <span>T24</span>
                     <span class="align-right">
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="showPlayerForm(null)">
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickAnotherButton(null)">
                         <i class="fa fa-plus"></i>
                       </button>
                     </span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">0</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["NA"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].devNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">7</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["DEV"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].sitNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">2</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["UAT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].uatNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">89</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["PreProd"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].ptNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">9</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["SIT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[1].component[0].drhNo}}</span>
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <span>TDS</span>
                     <span class="align-right">
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="showPlayerForm(null)">
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickOtherButton(null)">
                         <i class="fa fa-plus"></i>
                       </button>
                     </span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">90</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["NA"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].devNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">87</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["DEV"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].sitNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">27</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["UAT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].uatNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">30</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["PreProd"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].ptNo}}</span>
                   </td>
                   <td>
-                    <ul class="list-group">
-                      <span class="badge badge-info">12</span>
-                    </ul>
+                    <!-- <span class="badge badge-info">{{envHomeView.envInfos["SIT"].totalEnvironments}}</span> -->
+                    <span class="badge badge-info">{{port1s[0].component[0].drhNo}}</span>
                   </td>
                 </tr>
               </tbody>
@@ -736,7 +908,7 @@
   </div>
 </div>
 
-<popup #popup2 (confirmClick)="subpop2()">
+<popup class="pop2" #popup2 (confirmClick)="subpop2()">
   <form class="form-horizontal">
     <div class="form-group">
       <label for="inputContents" class="col-sm-3 control-label">System</label>
@@ -770,7 +942,7 @@
   </form>
 </popup>
 
-<popup #popup1 (confirmClick)="subpop1()">
+<popup class="pop1" #popup1 (confirmClick)="subpop1()">
   <form class="form-horizontal">
     <div class="form-group">
       <label for="inputContents" class="col-sm-3 control-label">System</label>
@@ -810,7 +982,7 @@
   </form>
 </popup>
 
-<popup #popup3 (confirmClick)="subpop3()">
+<popup class="pop3" #popup3 (confirmClick)="subpop3()">
   <form class="form-horizontal">
     <div class="form-group">
       <label for="inputContents" class="col-sm-3 control-label">System</label>
@@ -833,6 +1005,29 @@
       <label for="inputContents" class="col-sm-3 control-label">Database</label>
       <div class="col-sm-7">
         <input type="text" class="form-control" name="database" [(ngModel)]="database" id="database" placeholder="database">
+      </div>
+    </div>
+  </form>
+</popup>
+
+<popup class="pop4" #popup4 (confirmClick)="subpop4()">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="inputContents" class="col-sm-3 control-label">System Info</label>
+      <div class="col-sm-7">
+        <span>DEV Server</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputContents" class="col-sm-3 control-label">TDS APP</label>
+      <div class="col-sm-7">
+        <span>UP</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputContents" class="col-sm-3 control-label">Database</label>
+      <div class="col-sm-7">
+        <span>Postgres 10</span>
       </div>
     </div>
   </form>

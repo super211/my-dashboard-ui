@@ -14,3 +14,43 @@ td.system {
   width: 100px;
 }
 
+popup.pop1{
+  position: absolute;
+  right: 0;
+  left: 0;
+  border-radius: 3px;
+  background-color: white;
+  z-index: 999;
+  top: 1% !important;
+}
+
+popup.pop2{
+  position: absolute;
+  right: 0;
+  left: 0;
+  border-radius: 3px;
+  background-color: white;
+  z-index: 999;
+  top: 1% !important;
+}
+
+popup.pop3{
+  position: absolute;
+  right: 0;
+  left: 0;
+  border-radius: 3px;
+  background-color: white;
+  z-index: 999;
+  top: 1% !important;
+}
+
+popup.pop4{
+  position: absolute;
+  right: 0;
+  left: 0;
+  border-radius: 3px;
+  background-color: white;
+  z-index: 999;
+  top: 1% !important;
+}
+
