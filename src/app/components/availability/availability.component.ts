@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EnvHomeView , Product} from '../../models'
 
 @Component({
   selector: 'availability',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class AvailabilityComponent implements OnInit {
 
   constructor() { }
-
+  public envHomeView: EnvHomeView;
+  products: Product[];
+  
   ngOnInit() {
   }
 

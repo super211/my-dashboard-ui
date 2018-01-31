@@ -19,11 +19,11 @@ export class Registration {
 }
 
 export class VerifyUserPhone {
-    userid:string;
-    code:string;
+    userid: string;
+    code: string;
 }
 
-export class Serverinfo{
+export class Serverinfo {
     subDepartment: string;
     productName: string;
     envCategory: string;
@@ -34,54 +34,70 @@ export class Serverinfo{
     comments: string;
 }
 
-export class EnvSummary{
-    totalServers:string;
-    totalEnvironments:string;
+export class EnvSummary {
+    totalServers: string;
+    totalEnvironments: string;
 }
 
-export class EnvHomeView{
-    pageTitle:string;
-    totalServersCount:string;
-    envInfos: Map<string,EnvSummary>;
+export class EnvHomeView {
+    pageTitle: string;
+    totalServersCount: string;
+    envInfos: Map<string, EnvSummary>;
 }
 
 export class Product {
-  id: number;
-  name: string;
-  component: Map<string,ComInfo>;
+    id: number;
+    name: string;
+    component: Map<string, ComInfo>;
 
-  constructor() {
-    this.name = "";
-  }
+    constructor() {
+        this.name = "";
+    }
 }
 
-export class ComInfo{
-  id:number;
-  componentname:string;
-  ip:string;
-  env:string;
-  regNo:number;
-  perNo:number;
-  staNo:number;
-  prodNo:number;
+export class ComInfo {
+    id: number;
+    componentname: string;
+    ip: string;
+    env: string;
+    regNo: number;
+    perNo: number;
+    staNo: number;
+    prodNo: number;
 }
 
 export class Port1 {
     id: number;
     name: string;
-    component: Map<string,Port1Info>;
-  
+    component: Map<string, Port1Info>;
+
     constructor() {
-      this.name = "";
+        this.name = "";
     }
-  }
-  
-  export class Port1Info{
-    id:number;
-    componentname:string;
-    devNo:number;
-    sitNo:number;
-    uatNo:number;
-    ptNo:number;
-    drhNo:number;
-  }
+}
+
+export class Port1Info {
+    id: number;
+    componentname: string;
+    devNo: number;
+    sitNo: number;
+    uatNo: number;
+    ptNo: number;
+    drhNo: number;
+}
+
+export class Jobdispatcher {
+    branchName;
+    commitMessage;
+    errorLog;
+    exitCode;
+    localRepoPath;
+    propertiesFilePath;
+    propertiesToUpdate;
+    remoteRepoURL;
+    repoUserId;
+    repoUserPassword;
+    sshPrivateKeyLocalPath;
+    statusText;
+    successLog;
+}

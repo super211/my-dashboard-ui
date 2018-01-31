@@ -1,0 +1,25 @@
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">System</label>
+    <div class="col-sm-7">
+      <label>
+        <input type="radio" name="optradio" [value]="1" [(ngModel)]="mode">DEV</label>
+      <label>
+        <input type="radio" name="optradio" [value]="2" [(ngModel)]="mode">SIT</label>
+      <label>
+        <input type="radio" name="optradio" [value]="3" [(ngModel)]="mode">UAT</label>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">TDS APP</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="tdsapp" [(ngModel)]="tdsapp" id="tdsapp" placeholder="tdsapp">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">Database</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="database" [(ngModel)]="database" id="database" placeholder="database">
+    </div>
+  </div>
+</form>

@@ -22,7 +22,11 @@ import { EnvDetailsComponent } from './components/env-details/env-details.compon
 import { PageDrop } from "./components/page-header/page-drop.component";
 import { ProductService } from "./services/product.service";
 import { Port1Service } from "./services/port1.service";
-import { PopupModule } from 'ng2-opd-popup';
+import { JobdispatcherService } from "./services/jobdispatcher.service";
+import { TapComponent } from './components/provision/tap/tap.component';
+import { TDSComponent } from './components/provision/tds/tds.component';
+import { T24Component } from './components/provision/t24/t24.component';
+import { TDS2Component } from './components/provision/tds2/tds2.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,11 @@ import { PopupModule } from 'ng2-opd-popup';
     LoginComponent,
     KeysPipe,
     EnvDetailsComponent,
-    PageDrop
+    PageDrop,
+    TapComponent,
+    TDSComponent,
+    T24Component,
+    TDS2Component
   ],
   imports: [
     BrowserModule,
@@ -44,10 +52,9 @@ import { PopupModule } from 'ng2-opd-popup';
     FormsModule,
     AppInMemoryDbModule,
     JsonpModule,
-    PopupModule.forRoot(),
     InMemoryWebApiModule.forRoot(AppInMemoryDbService, { passThruUnknownUrl: true })
   ],
-  providers: [ProductService, Port1Service],
+  providers: [ProductService, Port1Service, JobdispatcherService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
