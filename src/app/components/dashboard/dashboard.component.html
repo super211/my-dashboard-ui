@@ -356,7 +356,8 @@
                   </td>
                   <td>
                     <span class="badge badge-info">{{products[0].component[0].regNo}}</span>
-                    <span>
+                    <br>
+                    <span *ngFor='let key of products[0].component[0].regNo | numberIterator'>
                       <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
                         <i class="fa fa-circle" style="font-size:4px"></i>
                       </button>
@@ -364,12 +365,8 @@
                   </td>
                   <td>
                     <span class="badge badge-info">{{products[0].component[0].perNo}}</span>
-                    <span>
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
-                        <i class="fa fa-circle" style="font-size:4px"></i>
-                      </button>
-                    </span>
-                    <span>
+                    <br>
+                    <span *ngFor='let key of products[0].component[0].perNo | numberIterator'>
                       <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
                         <i class="fa fa-circle" style="font-size:4px"></i>
                       </button>
@@ -377,17 +374,8 @@
                   </td>
                   <td>
                     <span class="badge badge-info">{{products[0].component[0].staNo}}</span>
-                    <span>
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
-                        <i class="fa fa-circle" style="font-size:4px"></i>
-                      </button>
-                    </span>
-                    <span>
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
-                        <i class="fa fa-circle" style="font-size:4px"></i>
-                      </button>
-                    </span>
-                    <span>
+                    <br>
+                    <span *ngFor='let key of products[0].component[0].staNo | numberIterator'>
                       <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
                         <i class="fa fa-circle" style="font-size:4px"></i>
                       </button>
@@ -395,7 +383,8 @@
                   </td>
                   <td>
                     <span class="badge badge-info">{{products[0].component[0].prodNo}}</span>
-                    <span>
+                    <br>
+                    <span *ngFor='let key of products[0].component[0].prodNo | numberIterator'>
                       <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
                         <i class="fa fa-circle" style="font-size:4px"></i>
                       </button>
@@ -413,12 +402,8 @@
                   </td>
                   <td>
                     <span class="badge badge-info">{{products[1].component[0].regNo}}</span>
-                    <span>
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
-                        <i class="fa fa-circle" style="font-size:4px"></i>
-                      </button>
-                    </span>
-                    <span>
+                    <br>
+                    <span *ngFor='let key of products[1].component[0].regNo | numberIterator'>
                       <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
                         <i class="fa fa-circle" style="font-size:4px"></i>
                       </button>
@@ -426,12 +411,8 @@
                   </td>
                   <td>
                     <span class="badge badge-info">{{products[1].component[0].perNo}}</span>
-                    <span>
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
-                        <i class="fa fa-circle" style="font-size:4px"></i>
-                      </button>
-                    </span>
-                    <span>
+                    <br>
+                    <span *ngFor='let key of products[1].component[0].perNo | numberIterator'>
                       <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
                         <i class="fa fa-circle" style="font-size:4px"></i>
                       </button>
@@ -439,7 +420,8 @@
                   </td>
                   <td>
                     <span class="badge badge-info">{{products[1].component[0].staNo}}</span>
-                    <span>
+                    <br>
+                    <span *ngFor='let key of products[1].component[0].staNo | numberIterator'>
                       <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
                         <i class="fa fa-circle" style="font-size:4px"></i>
                       </button>
@@ -447,12 +429,8 @@
                   </td>
                   <td>
                     <span class="badge badge-info">{{products[1].component[0].prodNo}}</span>
-                    <span>
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
-                        <i class="fa fa-circle" style="font-size:4px"></i>
-                      </button>
-                    </span>
-                    <span>
+                    <br>
+                    <span *ngFor='let key of products[1].component[0].prodNo | numberIterator'>
                       <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
                         <i class="fa fa-circle" style="font-size:4px"></i>
                       </button>
@@ -470,17 +448,8 @@
                   </td>
                   <td>
                     <span class="badge badge-info">{{products[2].component[0].regNo}}</span>
-                    <span>
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
-                        <i class="fa fa-circle" style="font-size:4px"></i>
-                      </button>
-                    </span>
-                    <span>
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
-                        <i class="fa fa-circle" style="font-size:4px"></i>
-                      </button>
-                    </span>
-                    <span>
+                    <br>
+                    <span *ngFor='let key of products[2].component[0].regNo | numberIterator'>
                       <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
                         <i class="fa fa-circle" style="font-size:4px"></i>
                       </button>
@@ -488,7 +457,8 @@
                   </td>
                   <td>
                     <span class="badge badge-info">{{products[2].component[0].perNo}}</span>
-                    <span>
+                    <br>
+                    <span *ngFor='let key of products[2].component[0].perNo | numberIterator'>
                       <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
                         <i class="fa fa-circle" style="font-size:4px"></i>
                       </button>
@@ -496,7 +466,8 @@
                   </td>
                   <td>
                     <span class="badge badge-info">{{products[2].component[0].staNo}}</span>
-                    <span>
+                    <br>
+                    <span *ngFor='let key of products[2].component[0].staNo | numberIterator'>
                       <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
                         <i class="fa fa-circle" style="font-size:4px"></i>
                       </button>
@@ -504,12 +475,8 @@
                   </td>
                   <td>
                     <span class="badge badge-info">{{products[2].component[0].prodNo}}</span>
-                    <span>
-                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
-                        <i class="fa fa-circle" style="font-size:4px"></i>
-                      </button>
-                    </span>
-                    <span>
+                    <br>
+                    <span *ngFor='let key of products[2].component[0].prodNo | numberIterator'>
                       <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
                         <i class="fa fa-circle" style="font-size:4px"></i>
                       </button>
@@ -565,22 +532,52 @@
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["NA"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[0].component[0].devNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[0].component[0].devNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["DEV"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[0].component[0].sitNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[0].component[0].sitNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["UAT"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[0].component[0].uatNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[0].component[0].uatNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["PreProd"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[0].component[0].ptNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[0].component[0].ptNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["SIT"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[0].component[0].drhNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[0].component[0].drhNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                 </tr>
                 <tr>
@@ -595,22 +592,52 @@
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["NA"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[1].component[0].devNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[1].component[0].devNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["DEV"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[1].component[0].sitNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[1].component[0].sitNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["UAT"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[1].component[0].uatNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[1].component[0].uatNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["PreProd"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[1].component[0].ptNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[1].component[0].ptNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["SIT"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[1].component[0].drhNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[1].component[0].drhNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                 </tr>
                 <tr>
@@ -625,22 +652,52 @@
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["NA"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[2].component[0].devNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[2].component[0].devNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["DEV"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[2].component[0].sitNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[2].component[0].sitNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["UAT"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[2].component[0].uatNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[2].component[0].uatNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["PreProd"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[2].component[0].ptNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[2].component[0].ptNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["SIT"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[2].component[0].drhNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[2].component[0].drhNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                 </tr>
               </tbody>
@@ -692,22 +749,52 @@
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["NA"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[1].component[0].devNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[1].component[0].devNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["DEV"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[1].component[0].sitNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[1].component[0].sitNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["UAT"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[1].component[0].uatNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[1].component[0].uatNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["PreProd"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[1].component[0].ptNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[1].component[0].ptNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["SIT"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[1].component[0].drhNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[1].component[0].drhNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                 </tr>
                 <tr>
@@ -722,22 +809,52 @@
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["NA"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[0].component[0].devNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[0].component[0].devNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["DEV"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[0].component[0].sitNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[0].component[0].sitNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["UAT"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[0].component[0].uatNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[0].component[0].uatNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["PreProd"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[0].component[0].ptNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[0].component[0].ptNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                   <td>
                     <!-- <span class="badge badge-info">{{envHomeView.envInfos["SIT"].totalEnvironments}}</span> -->
                     <span class="badge badge-info">{{port1s[0].component[0].drhNo}}</span>
+                    <br>
+                    <span *ngFor='let key of port1s[0].component[0].drhNo | numberIterator'>
+                      <button *ngIf="!newPlayer" class="btn btn-link btn-xs" (click)="ClickDetailsButton(null)">
+                        <i class="fa fa-circle" style="font-size:4px"></i>
+                      </button>
+                    </span>
                   </td>
                 </tr>
                 <tr>

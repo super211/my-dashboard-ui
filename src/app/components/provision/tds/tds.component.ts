@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tds',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TDSComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
   dev: string;
   system: string;
   tcib: string;
@@ -21,4 +22,10 @@ export class TDSComponent implements OnInit {
   ngOnInit() {
   }
 
+  backHome(){
+    this.router.navigate(['/index']);  
+  }
+  doSubmit(){
+    console.log('submitting  form');
+  }
 }

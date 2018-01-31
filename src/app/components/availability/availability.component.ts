@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { EnvHomeView , Product} from '../../models'
+import { EnvHomeView , Product} from '../../models';
+import { ProvisionService } from '../../services/provision.service';
 
 @Component({
   selector: 'availability',
   templateUrl: './availability.component.html',
-  styleUrls: ['./availability.component.css']
+  styleUrls: ['./availability.component.css'],
+  providers: []
 })
 export class AvailabilityComponent implements OnInit {
 
-  constructor() { }
+  constructor(private provisionService : ProvisionService) { }
   public envHomeView: EnvHomeView;
   products: Product[];
   

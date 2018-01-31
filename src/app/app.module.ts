@@ -22,11 +22,13 @@ import { EnvDetailsComponent } from './components/env-details/env-details.compon
 import { PageDrop } from "./components/page-header/page-drop.component";
 import { ProductService } from "./services/product.service";
 import { Port1Service } from "./services/port1.service";
+import { ProvisionService } from './services/provision.service';
 import { JobdispatcherService } from "./services/jobdispatcher.service";
 import { TapComponent } from './components/provision/tap/tap.component';
 import { TDSComponent } from './components/provision/tds/tds.component';
 import { T24Component } from './components/provision/t24/t24.component';
 import { TDS2Component } from './components/provision/tds2/tds2.component';
+import { NumberIteratorPipe } from './components/number-iterator.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { TDS2Component } from './components/provision/tds2/tds2.component';
     TapComponent,
     TDSComponent,
     T24Component,
-    TDS2Component
+    TDS2Component,
+    NumberIteratorPipe
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,7 @@ import { TDS2Component } from './components/provision/tds2/tds2.component';
     JsonpModule,
     InMemoryWebApiModule.forRoot(AppInMemoryDbService, { passThruUnknownUrl: true })
   ],
-  providers: [ProductService, Port1Service, JobdispatcherService],
+  providers: [ProductService, Port1Service, JobdispatcherService, ProvisionService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

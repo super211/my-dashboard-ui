@@ -1,3 +1,5 @@
+export * from './cmdInfo';
+
 export class CheckMobileNumber {
     MobileNumber: number;
 }
