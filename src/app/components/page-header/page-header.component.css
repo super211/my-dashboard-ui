@@ -1,4 +1,17 @@
 div.dropdown{
   position: relative;
-  top:17px;
+  top:11px;
+  right:8px;
+}
+
+select.inputstl { 
+  position: relative;
+  top:11px;
+  right:8px;
+}
+
+li.setting{
+  position: relative;
+  top:11px;
+  right:14px;
 }

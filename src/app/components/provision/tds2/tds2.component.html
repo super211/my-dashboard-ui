@@ -1,7 +1,7 @@
 <form class="form-horizontal">
   <div class="form-group">
-    <label for="inputContents" class="col-sm-3 control-label">System</label>
-    <div class="col-sm-7">
+    <label for="inputContents" class="col-sm-3 control-label">SYSTEM</label>
+    <div class="col-sm-7 detailcontent">
       <label>
         <input type="radio" name="optradio" [value]="1" [(ngModel)]="mode">DEV</label>
       <label>
@@ -10,23 +10,116 @@
         <input type="radio" name="optradio" [value]="3" [(ngModel)]="mode">UAT</label>
     </div>
   </div>
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="inputContents" class="col-sm-3 control-label">TDS APP</label>
     <div class="col-sm-7">
       <input type="text" class="form-control" name="tdsapp" [(ngModel)]="tdsapp" id="tdsapp" placeholder="tdsapp">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputContents" class="col-sm-3 control-label">Database</label>
+    <label for="inputContents" class="col-sm-3 control-label">DATABASE</label>
     <div class="col-sm-7">
       <input type="text" class="form-control" name="database" [(ngModel)]="database" id="database" placeholder="database">
     </div>
+  </div> -->
+  <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">TDS IP</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="tdsip" [(ngModel)]="tdsip" id="tdsip" placeholder="tds ip">
+    </div>
   </div>
   <div class="form-group">
-      <label class="col-sm-3" for="submit"></label>
-        <div class="col-sm-offset-3 col-sm-5">
-            <button type="submit" class="btn btn-success" (click)="doSubmit()">Submit</button>
-            <a [routerLink]="['/index']" class="btn btn-primary col-sm-offset-1">Back</a>
-      </div>
-      </div>
+    <label for="inputContents" class="col-sm-3 control-label">RDS HOSTNAME</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="rdshostname" [(ngModel)]="rdshostname" id="rdshostname" placeholder="rds hostname">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">RDS PORT</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="rdsport" [(ngModel)]="rdsport" id="rdsport" placeholder="rds port">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">RDS USERNAME</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="rdsusername" [(ngModel)]="rdsusername" id="rdsusername" placeholder="rds username">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">RDS DBNAME</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="rdsdbname" [(ngModel)]="rdsdbname" id="rdsdbname" placeholder="rds dbname">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">RDS PASSWORD</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="rdspassword" [(ngModel)]="rdspassword" id="rdspassword" placeholder="rds password">
+    </div>
+  </div>
+  <!-- <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">TIME</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="time" [(ngModel)]="time" id="time" placeholder="time">
+    </div>
+  </div> -->
+  <div class="form-group">
+    <label class="col-sm-3" for="submit"></label>
+    <div class="col-sm-offset-3 col-sm-5">
+      <button type="submit" class="btn btn-success" (click)="doSubmit()">Submit</button>
+      <a [routerLink]="['/index']" class="btn btn-primary col-sm-offset-1">Back</a>
+    </div>
+  </div>
 </form>
+
+<!-- <label for="inputContents" class="col-sm-3 control-label">ExitCode</label>
+    <div class="col-sm-7">
+      {{result.errorLog}}
+    </div> -->
+<br>
+<br>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Response Field</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Exit Code</td>
+        <td>{{result.exitCode}}</td>
+      </tr>
+      <tr>
+        <td>Success Log</td>
+        <td>{{result.successLog}}</td>
+      </tr>
+      <tr>
+        <td>Error Log</td>
+        <td>{{result.errorLog}}</td>
+      </tr>
+      <tr>
+        <td>Status Text</td>
+        <td>{{result.statusText}}</td>
+      </tr>
+      <tr>
+        <td>Properties File Path</td>
+        <td>{{result.propertiesFilePath}}</td>
+      </tr>
+      <!-- <tr>
+              <td>Properties To Update</td>
+              <td>{{result.propertiesToUpdate}}</td>
+            </tr> -->
+      <tr>
+        <td>Commit Message</td>
+        <td>{{result.commitMessage}}</td>
+      </tr>
+      <tr>
+        <td>Properties To Update</td>
+        <td>{{result.propertiesToUpdate[0]}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

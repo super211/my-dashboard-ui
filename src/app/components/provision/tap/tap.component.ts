@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProvisionService } from '../../../services/provision.service';
+import { CmdInfo } from '../../../models/index';
 
 @Component({
   selector: 'app-tap',
@@ -20,24 +21,33 @@ export class TapComponent implements OnInit {
   t24web: string;
   t24app: string;
   tdsapp: string;
-  myjson: any;
+  downloadIp: string;
+  finIp: string;
+  oracleId: string;
+  dbHost: string;
+  dbServiceName: string;
+  ocsIp: string;
+  tcibIp: string;
+  //myjson: any;
+  provisionCommandInfo: CmdInfo;
+  result: CmdInfo;
+
   ngOnInit() {
 
-    this.myjson = {
-      "branchName": "string",
-      "commitMessage": "string",
-      "errorLog": "string",
-      "exitCode": 0,
-      "localRepoPath": "string",
-      "propertiesFilePath": "string",
-      "propertiesToUpdate": {},
-      "remoteRepoURL": "string",
-      "repoUserId": "string",
-      "repoUserPassword": "string",
-      "sshPrivateKeyLocalPath": "string",
-      "statusText": "string",
-      "successLog": "string"
-    };
+    this.provisionCommandInfo = new CmdInfo();
+    // this.provisionCommandInfo.branchName = "master", //required
+    this.provisionCommandInfo.commitMessage = "Provision new T24 Instance", //required
+    this.provisionCommandInfo.errorLog = "",
+    this.provisionCommandInfo.exitCode = 0,
+    // this.provisionCommandInfo.localRepoPath = "tmp",
+    this.provisionCommandInfo.propertiesFilePath = "tds.aws.install.properties ", //Required
+    this.provisionCommandInfo.propertiesToUpdate = [{ 'rds_dbname': 'devopsdashboard' }, { 'rds_username': 'postgres' }], //Required
+    // this.provisionCommandInfo.remoteRepoURL = "https://bitbucket.org/agiledevopshub/tap-cicd.git", //Required
+    // this.provisionCommandInfo.repoUserId = "devopsadm",
+    // this.provisionCommandInfo.repoUserPassword = "Dev-Dummy3",
+    // this.provisionCommandInfo.sshPrivateKeyLocalPath = "string",
+    this.provisionCommandInfo.statusText = "string",
+    this.provisionCommandInfo.successLog = "string"
 
   }
 
@@ -52,14 +62,38 @@ export class TapComponent implements OnInit {
       this.system = "UAT";
     }
 
-    alert(JSON.stringify({ system: this.system, t24web: this.t24web, t24app: this.t24app, database: this.database }));
+    //alert(JSON.stringify({ system: this.system, t24web: this.t24web, t24app: this.t24app, database: this.database }));
     //this.http.post('http://someurl', JSON.stringify({ system: this.system, t24web: this.t24web, t24app: this.t24app, database: this.database }));
-    this.provisionService.submitProvisionTap(this.myjson).subscribe((res: any) => {
-      alert(JSON.stringify(res));
-    })
+    this.provisionCommandInfo.propertiesToUpdate = {
+      // 'webIp': this.t24web,
+      // 'appIp': this.t24app
+      'downloadIp': this.downloadIp,
+      'finIp': this.finIp,
+      'oracleId': this.oracleId,
+      'dbHost': this.dbHost,
+      'dbServiceName': this.dbServiceName,
+      'ocsIp': this.ocsIp,
+      'tcibIp': this.tcibIp,
+
+    };
+
+    this.provisionService.submitProvisionTap(this.provisionCommandInfo).subscribe((res: CmdInfo) => {
+      //alert(JSON.stringify(res));
+      this.result = res;
+    }, this.handleError,
+      this.handleCompleted);
   }
 
   backHome() {
     this.router.navigate(['/index']);
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.error('An error occurred: ', error); // for demo purposes only
+    return Promise.reject(error.message || error);
+  }
+
+  private handleCompleted() {
+    console.log("the subscription is completed");
   }
 }

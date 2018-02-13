@@ -57,6 +57,27 @@ export class Product {
     }
 }
 
+export class Package {
+    // createdOn: string;
+    // id: string;
+    // packageVersion: string;
+    id: number;
+    serverIp: string;
+    hostName: string;
+    serverCategory: string;
+    envCategory: string;
+    environmentName: string;
+    productCategory: string;
+    productName: string;
+    developmentStream: string;
+    assignedTo: string;
+    databaseEndpoint: string;
+    programName: string;
+    subDepartment: string;
+    comments: string;
+    lastUpdated: number;
+}
+
 export class ComInfo {
     id: number;
     componentname: string;

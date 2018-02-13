@@ -1,7 +1,7 @@
 <form class="form-horizontal">
   <div class="form-group">
-    <label for="inputContents" class="col-sm-3 control-label">System</label>
-    <div class="col-sm-7">
+    <label for="inputContents" class="col-sm-3 control-label">SYSTEM</label>
+    <div class="col-sm-7 detailcontent">
       <label>
         <input type="radio" name="optradio" [value]="1" [(ngModel)]="mode">DEV</label>
       <label>
@@ -11,34 +11,99 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="inputContents" class="col-sm-3 control-label">TCIB</label>
+    <label for="inputContents" class="col-sm-3 control-label">DOWNLOAD IP</label>
     <div class="col-sm-7">
-      <input type="text" class="form-control" name="tcib" [(ngModel)]="tcib" id="tcib" placeholder="tcib">
+      <input type="text" class="form-control" name="downloadIp" [(ngModel)]="downloadIp" id="downloadIp" placeholder="downloadIp">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputContents" class="col-sm-3 control-label">OCS</label>
+    <label for="inputContents" class="col-sm-3 control-label">FIN IP</label>
     <div class="col-sm-7">
-      <input type="text" class="form-control" name="ocs" [(ngModel)]="ocs" id="ocs" placeholder="ocs">
+      <input type="text" class="form-control" name="finIp" [(ngModel)]="finIp" id="finIp" placeholder="finIp">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputContents" class="col-sm-3 control-label">FIN Server</label>
+    <label for="inputContents" class="col-sm-3 control-label">ORACLE ID</label>
     <div class="col-sm-7">
-      <input type="text" class="form-control" name="finServer" [(ngModel)]="finServer" id="finServer" placeholder="finServer">
+      <input type="text" class="form-control" name="oracleId" [(ngModel)]="oracleId" id="oracleId" placeholder="oracleId">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputContents" class="col-sm-3 control-label">Database</label>
+    <label for="inputContents" class="col-sm-3 control-label">DB HOST</label>
     <div class="col-sm-7">
-      <input type="text" class="form-control" name="database" [(ngModel)]="database" id="database" placeholder="database">
+      <input type="text" class="form-control" name="dbHost" [(ngModel)]="dbHost" id="dbHost" placeholder="dbHost">
     </div>
   </div>
   <div class="form-group">
-      <label class="col-sm-3" for="submit"></label>
-        <div class="col-sm-offset-3 col-sm-5">
-            <button type="submit" class="btn btn-success" (click)="doSubmit()">Submit</button>
-            <a [routerLink]="['/index']" class="btn btn-primary col-sm-offset-1">Back</a>
-      </div>
-      </div>
+    <label for="inputContents" class="col-sm-3 control-label">DB SERVICE NAME</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="dbServiceName" [(ngModel)]="dbServiceName" id="dbServiceName" placeholder="dbServiceName">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">OCS IP</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="ocsIp" [(ngModel)]="ocsIp" id="ocsIp" placeholder="ocsIp">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">TCIB IP</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="tcibIp" [(ngModel)]="tcibIp" id="tcibIp" placeholder="tcibIp">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3" for="submit"></label>
+    <div class="col-sm-offset-3 col-sm-5">
+      <button type="submit" class="btn btn-success" (click)="doSubmit()">Submit</button>
+      <a [routerLink]="['/index']" class="btn btn-primary col-sm-offset-1">Back</a>
+    </div>
+  </div>
 </form>
+
+<br>
+<br>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Response Field</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Exit Code</td>
+        <td>{{result.exitCode}}</td>
+      </tr>
+      <tr>
+        <td>Success Log</td>
+        <td>{{result.successLog}}</td>
+      </tr>
+      <tr>
+        <td>Error Log</td>
+        <td>{{result.errorLog}}</td>
+      </tr>
+      <tr>
+        <td>Status Text</td>
+        <td>{{result.statusText}}</td>
+      </tr>
+      <tr>
+        <td>Properties File Path</td>
+        <td>{{result.propertiesFilePath}}</td>
+      </tr>
+      <!-- <tr>
+              <td>Properties To Update</td>
+              <td>{{result.propertiesToUpdate}}</td>
+            </tr> -->
+      <tr>
+        <td>Commit Message</td>
+        <td>{{result.commitMessage}}</td>
+      </tr>
+      <tr>
+        <td>Properties To Update</td>
+        <td>{{result.propertiesToUpdate[0]}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

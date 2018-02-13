@@ -1,0 +1,79 @@
+<div class="container">
+  <form class="form-horizontal">
+    <div class="col-md-6">
+        <div class="row container-fluid rounded-corner-widget">
+      <div class="form-group">
+        <label for="starttime" class="col-sm-3 control-label">Component</label>
+        <div class="col-md-9">
+          <select class="form-control inputstl" [(ngModel)]="selectedValue" name="selValue" (ngModelChange)="onChanges($event)">
+            <option *ngFor="let c of packages" [value]="c.id">{{c.serverIp}} </option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="starttime" class="col-sm-3 control-label">Branch</label>
+        <div class="col-md-9">
+          <select class="form-control inputstl" [(ngModel)]="selectedValue" name="selValue" (ngModelChange)="onChanges($event)">
+            <option *ngFor="let c of sellists" [value]="c.id">{{c.name}} </option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-2 pull-right">
+          <button type="submit" class="btn btn-success" (click)="doSubmit()">Build</button>
+          <!-- <a [routerLink]="['/index']" class="btn btn-primary col-sm-offset-1">Back</a> -->
+        </div>
+      </div>
+    </div>
+    </div>
+  </form>
+
+
+  <form class="form-horizontal">
+    <div class="col-md-6">
+        <div class="row container-fluid rounded-corner-widget">
+      <div class="form-group">
+        <label for="starttime" class="col-sm-3 control-label">Component</label>
+        <div class="col-md-9">
+          <select class="form-control inputstl" [(ngModel)]="selectedValue" name="selValue" (ngModelChange)="onChanges($event)">
+            <option *ngFor="let c of sellists" [value]="c.id">{{c.name}} </option>
+          </select>
+        </div>
+      
+      
+      
+      
+      </div>
+      <div class="form-group">
+        <label for="starttime" class="col-sm-3 control-label">Package</label>
+        <div class="col-md-9">
+          <select class="form-control inputstl" [(ngModel)]="selectedValue" name="selValue" (ngModelChange)="onChanges($event)">
+            <option *ngFor="let c of sellists" [value]="c.id">{{c.name}} </option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="starttime" class="col-sm-3 control-label">Env</label>
+        <div class="col-md-9">
+          <select class="form-control inputstl" [(ngModel)]="selectedValue" name="selValue" (ngModelChange)="onChanges($event)">
+            <option *ngFor="let c of sellists" [value]="c.id">{{c.name}} </option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-2 pull-right">
+          <button type="submit" class="btn btn-success" (click)="doSubmit()">Deploy</button>
+          <!-- <a [routerLink]="['/index']" class="btn btn-primary col-sm-offset-1">Back</a> -->
+        </div>
+      </div>
+    </div>
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-2 pull-right">
+          <!-- <button type="submit" class="btn btn-success" (click)="doSubmit()">Deploy</button> -->
+          <a [routerLink]="['/index']" class="btn btn-primary col-sm-offset-1">Back</a>
+        </div>
+      </div>
+    </div>
+    
+  </form>
+</div>

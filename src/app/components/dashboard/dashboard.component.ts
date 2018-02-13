@@ -108,6 +108,22 @@ export class DashboardComponent implements OnInit {
     // this.popup4.show(this.popup4.options);
   }
 
+  ClickDetailsButtons(key: number) {
+    // this.router.navigate(['/provision/tds']);
+    console.log("KEY: " + key);
+
+    // this.popup4.options = {
+    //   cancleBtnClass: "btn btn-default",
+    //   confirmBtnClass: "btn btn-mbe-attack",
+    //   color: "#3380FF",
+    //   header: "Server Info...",
+    //   widthProsentage: 40,
+    //   animation: "fadeInUp",
+    //   confirmBtnContent: "OK"
+    // }
+    // this.popup4.show(this.popup4.options);
+  }
+
   // subpop1() {
 
   //   if (this.mode == "1") {

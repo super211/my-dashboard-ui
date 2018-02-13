@@ -1,7 +1,7 @@
 <form class="form-horizontal">
   <div class="form-group">
-    <label for="inputContents" class="col-sm-3 control-label">System</label>
-    <div class="col-sm-7">
+    <label for="inputContents" class="col-sm-3 control-label">SYSTEM</label>
+    <div class="col-sm-7 detailcontent">
       <label>
         <input type="radio" name="optradio" [value]="1" [(ngModel)]="mode">DEV</label>
       <label>
@@ -11,21 +11,45 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="inputContents" class="col-sm-3 control-label">T24 Web</label>
+    <label for="inputContents" class="col-sm-3 control-label">WEB SERVER IP</label>
     <div class="col-sm-7">
-      <input type="text" class="form-control" name="t24web" [(ngModel)]="t24web" id="t24web" placeholder="t24web">
+      <input type="text" class="form-control" name="webserverip" [(ngModel)]="webserverip" id="webserverip" placeholder="webserverip">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputContents" class="col-sm-3 control-label">T24 APP</label>
+    <label for="inputContents" class="col-sm-3 control-label">APP SERVER IP</label>
     <div class="col-sm-7">
-      <input type="text" class="form-control" name="t24app" [(ngModel)]="t24app" id="t24app" placeholder="t24app">
+      <input type="text" class="form-control" name="appserverip" [(ngModel)]="appserverip" id="appserverip" placeholder="appserverip">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputContents" class="col-sm-3 control-label">Database</label>
+    <label for="inputContents" class="col-sm-3 control-label">CLOUD DB HOST IP</label>
     <div class="col-sm-7">
-      <input type="text" class="form-control" name="database" [(ngModel)]="database" id="database" placeholder="database">
+      <input type="text" class="form-control" name="clouddbhostip" [(ngModel)]="clouddbhostip" id="clouddbhostip" placeholder="clouddbhostip">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">CLOUD DB SID</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="cloudDbSid" [(ngModel)]="cloudDbSid" id="cloudDbSid" placeholder="cloudDbSid">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">CLOUD DB PORT</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="cloudDbPort" [(ngModel)]="cloudDbPort" id="cloudDbPort" placeholder="cloudDbPort">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">CLOUD SUPER USER</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="cloudSuperUser" [(ngModel)]="cloudSuperUser" id="cloudSuperUser" placeholder="cloudSuperUser">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputContents" class="col-sm-3 control-label">CLOUD SUPER PWD</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" name="cloudSuperPwd" [(ngModel)]="cloudSuperPwd" id="cloudSuperPwd" placeholder="cloudSuperPwd">
     </div>
   </div>
 
@@ -37,3 +61,51 @@
     </div>
     </div>
 </form>
+
+
+<br>
+<br>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Response Field</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Exit Code</td>
+        <td>{{result.exitCode}}</td>
+      </tr>
+      <tr>
+        <td>Success Log</td>
+        <td>{{result.successLog}}</td>
+      </tr>
+      <tr>
+        <td>Error Log</td>
+        <td>{{result.errorLog}}</td>
+      </tr>
+      <tr>
+        <td>Status Text</td>
+        <td>{{result.statusText}}</td>
+      </tr>
+      <tr>
+        <td>Properties File Path</td>
+        <td>{{result.propertiesFilePath}}</td>
+      </tr>
+      <!-- <tr>
+              <td>Properties To Update</td>
+              <td>{{result.propertiesToUpdate}}</td>
+            </tr> -->
+      <tr>
+        <td>Commit Message</td>
+        <td>{{result.commitMessage}}</td>
+      </tr>
+      <tr>
+        <td>Properties To Update</td>
+        <td>{{result.propertiesToUpdate[0]}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

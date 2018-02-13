@@ -22,25 +22,32 @@ export class T24Component implements OnInit {
   t24web: string;
   t24app: string;
   tdsapp: string;
+  webserverip: string;
+  appserverip: string;
+  clouddbhostip: string;
+  cloudDbSid: string;
+  cloudDbPort: string;
+  cloudSuperUser: string;
+  cloudSuperPwd: string;
   myjson: any;
-  
+
   provisionCommandInfo: CmdInfo;
   result: CmdInfo;
   ngOnInit() {
     this.provisionCommandInfo = new CmdInfo();
-      this.provisionCommandInfo.branchName= "master", //required
-      this.provisionCommandInfo.commitMessage= "Provision new T24 Instance", //required
-      this.provisionCommandInfo.errorLog= "",
-      this.provisionCommandInfo.exitCode= 0,
-      this.provisionCommandInfo.localRepoPath= "tmp",
-      this.provisionCommandInfo.propertiesFilePath= "tds.aws.install.properties ", //Required
-      this.provisionCommandInfo.propertiesToUpdate= [{ 'rds_dbname': 'devopsdashboard'}, {'rds_username': 'postgres'}], //Required
-      this.provisionCommandInfo.remoteRepoURL= "https://bitbucket.org/agiledevopshub/tap-cicd.git", //Required
-      this.provisionCommandInfo.repoUserId= "devopsadm",
-      this.provisionCommandInfo.repoUserPassword= "Dev-Dummy3",
-      this.provisionCommandInfo.sshPrivateKeyLocalPath= "string",
-      this.provisionCommandInfo.statusText= "string",
-      this.provisionCommandInfo.successLog= "string"
+    // this.provisionCommandInfo.branchName= "master", //required
+    this.provisionCommandInfo.commitMessage = "Provision new T24 Instance", //required
+      this.provisionCommandInfo.errorLog = "",
+      this.provisionCommandInfo.exitCode = 0,
+      // this.provisionCommandInfo.localRepoPath= "tmp",
+      this.provisionCommandInfo.propertiesFilePath = "tds.aws.install.properties ", //Required
+      this.provisionCommandInfo.propertiesToUpdate = [{ 'rds_dbname': 'devopsdashboard' }, { 'rds_username': 'postgres' }], //Required
+      // this.provisionCommandInfo.remoteRepoURL= "https://bitbucket.org/agiledevopshub/tap-cicd.git", //Required
+      // this.provisionCommandInfo.repoUserId= "devopsadm",
+      // this.provisionCommandInfo.repoUserPassword= "Dev-Dummy3",
+      // this.provisionCommandInfo.sshPrivateKeyLocalPath= "string",
+      this.provisionCommandInfo.statusText = "string",
+      this.provisionCommandInfo.successLog = "string"
   }
 
   doSubmit() {
@@ -54,29 +61,36 @@ export class T24Component implements OnInit {
       this.system = "UAT";
     }
 
-    alert(JSON.stringify({ system: this.system, t24web: this.t24web, t24app: this.t24app, database: this.database }));
+    //alert(JSON.stringify({ system: this.system, t24web: this.t24web, t24app: this.t24app, database: this.database }));
     //this.http.post('http://someurl', JSON.stringify({ system: this.system, t24web: this.t24web, t24app: this.t24app, database: this.database }));
     this.provisionCommandInfo.propertiesToUpdate = {
-      'webIp': this.t24web,
-      'appIp': this.t24app
+      // 'webIp': this.t24web,
+      // 'appIp': this.t24app
+      'webserverip': this.webserverip,
+      'appserverip': this.appserverip,
+      'clouddbhostip': this.clouddbhostip,
+      'cloudDbSid': this.cloudDbSid,
+      'cloudDbPort': this.cloudDbPort,
+      'cloudSuperUser': this.cloudSuperUser,
+      'cloudSuperPwd': this.cloudSuperPwd,
     };
-    this.provisionService.submitProvision(this.provisionCommandInfo).subscribe((res:CmdInfo)=>{
-      alert(JSON.stringify(res));
-      this.result=res;
-    },this.handleError, 
-    this.handleCompleted);
+    this.provisionService.submitProvision(this.provisionCommandInfo).subscribe((res: CmdInfo) => {
+      //alert(JSON.stringify(res));
+      this.result = res;
+    }, this.handleError,
+      this.handleCompleted);
   }
 
   backHome() {
     this.router.navigate(['/index']);
   }
 
-    private handleError(error: any): Promise<any> {
+  private handleError(error: any): Promise<any> {
     console.error('An error occurred: ', error); // for demo purposes only
     return Promise.reject(error.message || error);
   }
 
-    private handleCompleted() {
-        console.log("the subscription is completed");
+  private handleCompleted() {
+    console.log("the subscription is completed");
   }
 }

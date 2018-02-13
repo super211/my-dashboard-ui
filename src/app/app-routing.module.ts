@@ -9,6 +9,7 @@ import { TapComponent } from './components/provision/tap/tap.component';
 import { TDSComponent } from './components/provision/tds/tds.component';
 import { T24Component } from './components/provision/t24/t24.component';
 import { TDS2Component } from './components/provision/tds2/tds2.component';
+import { PackageComponent } from './components/provision/package/package.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const routes: Routes = [
     {path: 'provision/tap', component: TapComponent},
     {path: 'provision/tds', component: TDSComponent},
     {path: 'provision/tds2', component: TDS2Component},
+    {path: 'provision/package', component: PackageComponent},
     { path: 'login', component: LoginComponent}];
 
 @NgModule({

@@ -4,7 +4,7 @@ import { Component } from '@angular/core'
   selector: 'page-drop',
   template: `
       <div>
-        <select [compareWith]="byJob" [(ngModel)]="selectedJob" (ngModelChange)="onChange($event)">
+        <select class="form-control inputstl" [compareWith]="byJob" [(ngModel)]="selectedJob" (ngModelChange)="onChange($event)">
           <option *ngFor="let job of jobs" [ngValue]="job" >
             {{job.type}}
           </option>
@@ -16,14 +16,14 @@ import { Component } from '@angular/core'
 
 export class PageDrop {
   jobs;
-  name:string;
-  event:string;
-  type:string;
-  selectedJob:any;
-  selectedItem:any;
+  name: string;
+  event: string;
+  type: string;
+  selectedJob: any;
+  selectedItem: any;
 
   constructor() {
-    this.jobs = [{type: 'Dev & Ops Project'}, {type: 'Enable Project'}]
+    this.jobs = [{ type: 'Dev & Ops Project' }, { type: 'Enable Project' }]
     this.selectedJob = this.jobs[0]
   }
 
@@ -31,7 +31,7 @@ export class PageDrop {
     return item1.type == 'Dev & Ops Project'
   }
 
-  onChange(event:any) {
+  onChange(event: any) {
     console.log(event);
     this.selectedItem = event;
     console.log(Object.is(event, this.selectedItem));

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TapComponent } from './tap.component';
+import { PackageComponent } from './package.component';
 
-describe('TapComponent', () => {
-  let component: TapComponent;
-  let fixture: ComponentFixture<TapComponent>;
+describe('PackageComponent', () => {
+  let component: PackageComponent;
+  let fixture: ComponentFixture<PackageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TapComponent]
+      declarations: [ PackageComponent ]
     })
-      .compileComponents();
+    .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TapComponent);
+    fixture = TestBed.createComponent(PackageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

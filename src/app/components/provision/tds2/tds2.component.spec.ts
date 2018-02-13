@@ -8,9 +8,9 @@ describe('TDS2Component', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TDS2Component ]
+      declarations: [TDS2Component]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
