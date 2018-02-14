@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProvisionService } from '../../../services/provision.service';
-import { CmdInfo } from '../../../models/index';
+import { CmdInfo, JobStatusNotificationModel } from '../../../models/index';
+import { AnonymousSubscription } from 'rxjs/Subscription';
+import { timer } from 'rxjs/observable/timer';
+import { Observable } from 'rxjs/Rx';
+import { AppConstants } from '../../../app.constants';
 
 @Component({
   selector: 'app-tds2',
@@ -34,6 +38,14 @@ export class TDS2Component implements OnInit {
   public resultMsg: any;
   inProgress: boolean;
 
+  private notificationQueId = '2';
+  private currentNotification;
+  private percentComplete: number;
+
+  private jobStatusSubscription: AnonymousSubscription;
+  private timerSubscription: AnonymousSubscription;
+  public jobStatusNotification: JobStatusNotificationModel[];
+
   ngOnInit() {
 
     this.provisionCommandInfo = new CmdInfo();
@@ -51,6 +63,11 @@ export class TDS2Component implements OnInit {
       this.provisionCommandInfo.statusText = "string",
       this.provisionCommandInfo.successLog = "string"
     this.inProgress = false;
+
+    this.jobStatusNotification = [];
+    this.currentNotification = new JobStatusNotificationModel();
+    this.currentNotification = 0;
+    this.refreshStatus();
   }
 
   doSubmit() {
@@ -106,5 +123,9 @@ export class TDS2Component implements OnInit {
   private handleCompleted() {
     //this.inProgress = false;
     console.log("the subscription is completed");
+  }
+
+  private refreshStatus(): void{
+    this.percentComplete = 40;
   }
 }
