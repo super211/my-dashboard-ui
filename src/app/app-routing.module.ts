@@ -10,6 +10,7 @@ import { TDSComponent } from './components/provision/tds/tds.component';
 import { T24Component } from './components/provision/t24/t24.component';
 import { TDS2Component } from './components/provision/tds2/tds2.component';
 import { PackageComponent } from './components/provision/package/package.component';
+import { BuildComponent } from './components/provision/build/build.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -21,6 +22,7 @@ const routes: Routes = [
     {path: 'provision/tds', component: TDSComponent},
     {path: 'provision/tds2', component: TDS2Component},
     {path: 'provision/package', component: PackageComponent},
+    {path: 'provision/build', component: BuildComponent},
     { path: 'login', component: LoginComponent}];
 
 @NgModule({

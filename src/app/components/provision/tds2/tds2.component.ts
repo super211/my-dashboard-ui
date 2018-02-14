@@ -32,6 +32,7 @@ export class TDS2Component implements OnInit {
   public result: CmdInfo;
   public resutlExitCode: string;
   public resultMsg: any;
+  inProgress: boolean;
 
   ngOnInit() {
 
@@ -49,7 +50,7 @@ export class TDS2Component implements OnInit {
       // this.provisionCommandInfo.sshPrivateKeyLocalPath = "string",
       this.provisionCommandInfo.statusText = "string",
       this.provisionCommandInfo.successLog = "string"
-
+    this.inProgress = false;
   }
 
   doSubmit() {
@@ -63,6 +64,7 @@ export class TDS2Component implements OnInit {
       this.system = "UAT";
     }
 
+    this.inProgress = true;
     // alert(JSON.stringify({ system: this.system, t24web: this.t24web, t24app: this.t24app, database: this.database }));
     //alert(JSON.stringify({ tdsip: this.tdsip, rdshostname: this.rdshostname, rdsport: this.rdsport, rdsusername: this.rdsusername, rdsdbname: this.rdsdbname, rdspassword: this.rdspassword, time: this.time }));
     //this.http.post('http://someurl', JSON.stringify({ system: this.system, t24web: this.t24web, t24app: this.t24app, database: this.database }));
@@ -86,6 +88,7 @@ export class TDS2Component implements OnInit {
       //alert(res.statusText);
 
       // document.getElementById("demo").innerHTML = this.resultMsg;
+      this.inProgress = false;
     }, this.handleError,
       this.handleCompleted);
   }
@@ -96,10 +99,12 @@ export class TDS2Component implements OnInit {
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred: ', error); // for demo purposes only
+    this.inProgress = false;
     return Promise.reject(error.message || error);
   }
 
   private handleCompleted() {
+    //this.inProgress = false;
     console.log("the subscription is completed");
   }
 }

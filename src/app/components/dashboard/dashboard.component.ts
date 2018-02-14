@@ -21,9 +21,9 @@ export class DashboardComponent implements OnInit {
   public allServerInfos: Serverinfo[];
   public envHomeView: EnvHomeView;
   public envInfos: Map<string, EnvSummary>;
-  products: Product[];
-  port1s: Port1[];
-  jobdispatchers: Jobdispatcher[];
+  public products: Product[];
+  public port1s: Port1[];
+  public jobdispatchers: Jobdispatcher[];
   dev: string;
   system: string;
   tcib: string;

@@ -31,6 +31,7 @@ import { T24Component } from './components/provision/t24/t24.component';
 import { TDS2Component } from './components/provision/tds2/tds2.component';
 import { NumberIteratorPipe } from './components/number-iterator.pipe';
 import { PackageComponent } from './components/provision/package/package.component';
+import { BuildComponent } from './components/provision/build/build.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { PackageComponent } from './components/provision/package/package.compone
     T24Component,
     TDS2Component,
     NumberIteratorPipe,
-    PackageComponent
+    PackageComponent,
+    BuildComponent
   ],
   imports: [
     BrowserModule,
