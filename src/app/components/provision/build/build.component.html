@@ -1,0 +1,127 @@
+<div class="container">
+  <form class="form-horizontal">
+    <div class="col-md-6">
+      <!-- <div class="row container-fluid rounded-corner-widget"> -->
+        <fieldset>
+          <legend>BUILD</legend>
+          <div class="form-group">
+            <label for="starttime" class="col-sm-3 control-label">Component</label>
+            <div class="col-md-9">
+              <select class="form-control inputstl" [(ngModel)]="selectedValue" name="selValue" (ngModelChange)="onChanges($event)">
+                <option *ngFor="let c of packages" [value]="c.id">{{c.serverIp}} </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="starttime" class="col-sm-3 control-label">Branch</label>
+            <div class="col-md-9">
+              <select class="form-control inputstl" [(ngModel)]="selectedValue" name="selValue" (ngModelChange)="onChanges($event)">
+                <option *ngFor="let c of sellists" [value]="c.id">{{c.name}} </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-2 pull-right">
+              <button type="submit" class="btn btn-success" (click)="doSubmit()">Build</button>
+              <!-- <a [routerLink]="['/index']" class="btn btn-primary col-sm-offset-1">Back</a> -->
+            </div>
+          </div>
+        </fieldset>
+      <!-- </div> -->
+    </div>
+  </form>
+
+
+  <form class="form-horizontal">
+    <div class="col-md-6">
+      <!-- <div class="row container-fluid rounded-corner-widget"> -->
+        <fieldset>
+          <legend>DEPLOY</legend>
+          <div class="form-group">
+            <label for="starttime" class="col-sm-3 control-label">Component</label>
+            <div class="col-md-9">
+              <select class="form-control inputstl" [(ngModel)]="selectedValue" name="selValue" (ngModelChange)="onChanges($event)">
+                <option *ngFor="let c of sellists" [value]="c.id">{{c.name}} </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="starttime" class="col-sm-3 control-label">Package</label>
+            <div class="col-md-9">
+              <select class="form-control inputstl" [(ngModel)]="selectedValue" name="selValue" (ngModelChange)="onChanges($event)">
+                <option *ngFor="let c of sellists" [value]="c.id">{{c.name}} </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="starttime" class="col-sm-3 control-label">Env</label>
+            <div class="col-md-9">
+              <select class="form-control inputstl" [(ngModel)]="selectedValue" name="selValue" (ngModelChange)="onChanges($event)">
+                <option *ngFor="let c of sellists" [value]="c.id">{{c.name}} </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-2 pull-right">
+              <button type="submit" class="btn btn-success" (click)="doSubmit()">Deploy</button>
+              <!-- <a [routerLink]="['/index']" class="btn btn-primary col-sm-offset-1">Back</a> -->
+            </div>
+          </div>
+        </fieldset>
+      <!-- </div> -->
+      <br>
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-2 pull-right">
+          <!-- <button type="submit" class="btn btn-success" (click)="doSubmit()">Deploy</button> -->
+          <a [routerLink]="['/index']" class="btn btn-primary col-sm-offset-1">Back</a>
+        </div>
+        
+      </div>
+    </div>
+
+  </form>
+</div>
+
+<form>
+  <fieldset>
+    <legend>Please select your preferred contact method:</legend>
+    <div>
+      <input class="radio" type="radio" id="contactChoice1" name="contact" value="email" checked>
+      <label for="contactChoice1">Email</label>
+
+      <input class="radio" type="radio" id="contactChoice2" name="contact" value="phone">
+      <label for="contactChoice2">Phone</label>
+
+      <input class="radio" type="radio" id="contactChoice3" name="contact" value="mail">
+      <label for="contactChoice3">Mail</label>
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </fieldset>
+</form>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="progress-outer">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info progress-bar-striped active" style="width:90%; box-shadow:-1px 10px 10px rgba(91, 192, 222, 0.7);"></div>
+                    <div class="progress-value">100%</div>
+                </div>
+            </div>
+            <div class="progress-outer">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" style="width:60%; box-shadow:-1px 10px 10px rgba(116, 195, 116,0.7);"></div>
+                    <div class="progress-value">60%</div>
+                </div>
+            </div>
+            <div class="progress-outer">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width:40%; box-shadow:-1px 10px 10px rgba(240, 173, 78,0.7);"></div>
+                    <div class="progress-value">40%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
