@@ -1,0 +1,20 @@
+.pull-right {
+    float: rifht !important;
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+a {
+    font-weight: bold;
+}
+
+.list-group-item:hover {
+    color: #fff;
+    background-color: #2d6987;
+}
+
+.list-group-item>a:hover {
+    color: #fff;
+}

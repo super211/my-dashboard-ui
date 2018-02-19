@@ -33,6 +33,8 @@ import { NumberIteratorPipe } from './components/number-iterator.pipe';
 import { PackageComponent } from './components/provision/package/package.component';
 import { BuildComponent } from './components/provision/build/build.component';
 
+import { InfraModule } from './modules/infra/infra.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +62,8 @@ import { BuildComponent } from './components/provision/build/build.component';
     FormsModule,
     AppInMemoryDbModule,
     JsonpModule,
-    InMemoryWebApiModule.forRoot(AppInMemoryDbService, { passThruUnknownUrl: true })
+    InMemoryWebApiModule.forRoot(AppInMemoryDbService, { passThruUnknownUrl: true }),
+    InfraModule
   ],
   providers: [ProductService, Port1Service, JobdispatcherService, PackageService, ProvisionService],
   bootstrap: [AppComponent]

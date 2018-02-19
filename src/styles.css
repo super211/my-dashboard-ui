@@ -478,3 +478,23 @@ table.table-large-text * tr td > ul.list-group > li.list-group-item > span.badge
     z-index: 100000;
     top:50px;
   }
+
+  .sidenav{
+    height:100%;
+    position: fixed; /*to shorten the width of the sidednav, otherwise it will be long*/
+    z-index: 1;
+    left: 0;
+    overflow-x: hidden;
+  }
+
+  .sidebar-nav a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+  }
+
+  .main{
+    margin-left: 200px;
+    padding: 0px 10px;
+  }

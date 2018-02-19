@@ -1,4 +1,6 @@
 export * from './cmdInfo';
+export * from './TCIBProvisionModel';
+export * from './JobStatusNotificationModel';
 
 export class CheckMobileNumber {
     MobileNumber: number;

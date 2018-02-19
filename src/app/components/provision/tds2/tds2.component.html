@@ -87,6 +87,22 @@
     </div>
     <img class="loading" *ngIf="inProgress" src="assets/img/load.gif" alt="loading...">
   </div>
+
+  <div class="row col-sm-12" *ngIf="result != null">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>LOG</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{result | json }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <table class="table table-hover">
     <thead>
       <tr>

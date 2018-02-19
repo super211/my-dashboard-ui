@@ -103,7 +103,7 @@ export class TDS2Component implements OnInit {
       this.result = res;
       //this.resutlExitCode = res.branchName;
       //alert(res.statusText);
-
+      this.percentComplete = 25;
       // document.getElementById("demo").innerHTML = this.resultMsg;
       this.inProgress = false;
     }, this.handleError,

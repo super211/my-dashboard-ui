@@ -11,6 +11,7 @@ import { T24Component } from './components/provision/t24/t24.component';
 import { TDS2Component } from './components/provision/tds2/tds2.component';
 import { PackageComponent } from './components/provision/package/package.component';
 import { BuildComponent } from './components/provision/build/build.component';
+import { InfraModule } from './modules/infra/infra.module';
 
 const routes: Routes = [
     { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -26,7 +27,7 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent}];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, {useHash: true})],
+    imports: [InfraModule, RouterModule.forRoot(routes, {useHash: true})],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
