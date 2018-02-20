@@ -34,6 +34,7 @@ import { PackageComponent } from './components/provision/package/package.compone
 import { BuildComponent } from './components/provision/build/build.component';
 
 import { InfraModule } from './modules/infra/infra.module';
+import { TcibDeployComponent } from './modules/deploy/tcib-deploy/tcib-deploy.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { InfraModule } from './modules/infra/infra.module';
     TDS2Component,
     NumberIteratorPipe,
     PackageComponent,
-    BuildComponent
+    BuildComponent,
+    TcibDeployComponent
   ],
   imports: [
     BrowserModule,

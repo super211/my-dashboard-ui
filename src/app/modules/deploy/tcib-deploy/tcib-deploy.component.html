@@ -1,0 +1,69 @@
+<form class="form-horizontal">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="selectedComponent" class="col-sm-3 control-label">Component Name</label>
+      <div class="col-sm-9">
+        <select class="form-control inputstl" id="selectedComponent" name="tcibDeployModel.system" [(ngModel)]="tcibDeployModel.system"
+          (ngModelChange)="onChanges($event)">
+          <option *ngFor="let c of lstComponents" [value]="c">{{c | uppercase }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="selectedComponent" class="col-sm-3 control-label">Package</label>
+      <div class="col-sm-9">
+        <select class="form-control inputstl" id="selectedPackage" name="tcibDeployModel.form_war" [(ngModel)]="tcibDeployModel.form_war"
+          (ngModelChange)="onChanges($event)">
+          <option *ngFor="let c of lstPackages" [value]="c">{{c | uppercase }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="selectedComponent" class="col-sm-3 control-label">Component Name</label>
+      <div class="col-sm-9">
+        <select class="form-control inputstl" id="selectedEnvironment" name="tcibDeployModel.deploy_env" [(ngModel)]="tcibDeployModel.deploy_env"
+          (ngModelChange)="onChanges($event)">
+          <option *ngFor="let c of lstEnvironments" [value]="componentName">{{c | uppercase }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputContents" class="col-sm-3 control-label">fopm_licence file</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="fopm_licence_file" [(ngModel)]="tcibDeployModel.fopm_licence_file" id="fopm_licence_file" placeholder="fopm_licence_file">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputContents" class="col-sm-3 control-label">user</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="user" [(ngModel)]="tcibDeployModel.user" id="user" placeholder="user">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputContents" class="col-sm-3 control-label">arifactory_location</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="aricactory_location" [(ngModel)]="tcibDeployModel.aricactory_location" id="aricactory_location" placeholder="aricactory_location">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputContents" class="col-sm-3 control-label">download_location</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="download_location" [(ngModel)]="tcibDeployModel.download_location" id="download_location" placeholder="download_location">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputContents" class="col-sm-3 control-label">ocs_server_ip</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="ocs_server_ip" [(ngModel)]="tcibDeployModel.ocs_server_ip" id="ocs_server_ip" placeholder="ocs_server_ip">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="col-sm-3" for="submit"></label>
+      <div class="col-sm-offset-3 col-sm-5">
+        <button type="submit" class="btn btn-success" (click)="doSubmit()">Deploy</button>
+        <a [routerLink]="['/index']" class="btn btn-primary col-sm-offset-1">Back</a>
+      </div>
+    </div>
+  </div>
+</form>

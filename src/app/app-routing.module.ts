@@ -11,6 +11,7 @@ import { T24Component } from './components/provision/t24/t24.component';
 import { TDS2Component } from './components/provision/tds2/tds2.component';
 import { PackageComponent } from './components/provision/package/package.component';
 import { BuildComponent } from './components/provision/build/build.component';
+import { TcibDeployComponent } from './modules/deploy/tcib-deploy/tcib-deploy.component';
 import { InfraModule } from './modules/infra/infra.module';
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
     {path: 'provision/tds2', component: TDS2Component},
     {path: 'provision/package', component: PackageComponent},
     {path: 'provision/build', component: BuildComponent},
+    {path: 'deploy/tcib', component: TcibDeployComponent},
     { path: 'login', component: LoginComponent}];
 
 @NgModule({
