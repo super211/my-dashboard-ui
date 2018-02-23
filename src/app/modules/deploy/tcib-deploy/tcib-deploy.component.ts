@@ -15,6 +15,8 @@ import { AnonymousSubscription } from 'rxjs/Subscription';
 export class TcibDeployComponent implements OnInit {
 
   public inProgress: boolean;
+  public isSuccess: boolean;
+  public isFailed: boolean;
   public percentComplete: number;
   public provisionCommand: ProvisionCommand;
   public result: ProvisionCommand;
@@ -42,6 +44,8 @@ export class TcibDeployComponent implements OnInit {
 
   ngOnInit() {
     this.inProgress = false;
+    this.isSuccess = false;
+    this.isFailed = false;
     this.percentComplete = 5;
     this.tcibDeployModel = new TCIBDeployModel();
     this.tcibDeployModel.time = Date.now().toString();

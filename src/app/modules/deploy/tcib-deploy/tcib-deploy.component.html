@@ -30,7 +30,8 @@
     <div class="form-group">
       <label for="inputContents" class="col-sm-3 control-label">fopm_licence file</label>
       <div class="col-sm-9">
-        <input type="text" class="form-control" name="fopm_licence_file" [(ngModel)]="tcibDeployModel.fopm_licence_file" id="fopm_licence_file" placeholder="fopm_licence_file">
+        <input type="text" class="form-control" name="fopm_licence_file" [(ngModel)]="tcibDeployModel.fopm_licence_file" id="fopm_licence_file"
+          placeholder="fopm_licence_file">
       </div>
     </div>
     <div class="form-group">
@@ -42,22 +43,25 @@
     <div class="form-group">
       <label for="inputContents" class="col-sm-3 control-label">arifactory_location</label>
       <div class="col-sm-9">
-        <input type="text" class="form-control" name="aricactory_location" [(ngModel)]="tcibDeployModel.aricactory_location" id="aricactory_location" placeholder="aricactory_location">
+        <input type="text" class="form-control" name="aricactory_location" [(ngModel)]="tcibDeployModel.aricactory_location" id="aricactory_location"
+          placeholder="aricactory_location">
       </div>
     </div>
     <div class="form-group">
       <label for="inputContents" class="col-sm-3 control-label">download_location</label>
       <div class="col-sm-9">
-        <input type="text" class="form-control" name="download_location" [(ngModel)]="tcibDeployModel.download_location" id="download_location" placeholder="download_location">
+        <input type="text" class="form-control" name="download_location" [(ngModel)]="tcibDeployModel.download_location" id="download_location"
+          placeholder="download_location">
       </div>
     </div>
     <div class="form-group">
       <label for="inputContents" class="col-sm-3 control-label">ocs_server_ip</label>
       <div class="col-sm-9">
-        <input type="text" class="form-control" name="ocs_server_ip" [(ngModel)]="tcibDeployModel.ocs_server_ip" id="ocs_server_ip" placeholder="ocs_server_ip">
+        <input type="text" class="form-control" name="ocs_server_ip" [(ngModel)]="tcibDeployModel.ocs_server_ip" id="ocs_server_ip"
+          placeholder="ocs_server_ip">
       </div>
     </div>
-    
+
     <div class="form-group">
       <label class="col-sm-3" for="submit"></label>
       <div class="col-sm-offset-3 col-sm-5">
@@ -71,8 +75,20 @@
 
 <div class="row container">
   <div class="col-sm-12">
-    <div class="progress" *ngIf="inProgress">
+    <!-- <div class="progress" *ngIf="inProgress">
       <div class="progress-bar bg-success progress-bar-tripped progress-bar-animated" role="progressbar" aria-valuenow="percentComplete"
+        aria-valuemin="0" aria-valuemax="100" [style.width]="percentComplete+'%'"></div>
+    </div> -->
+    <div class="progress" *ngIf="inProgress">
+      <div class="progress-bar progress-bar-tripped active" role="progressbar" aria-valuenow="percentComplete"
+        aria-valuemin="0" aria-valuemax="100" [style.width]="percentComplete+'%'"></div>
+    </div>
+    <div class="progress" *ngIf="isSuccess">
+      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="percentComplete"
+        aria-valuemin="0" aria-valuemax="100" [style.width]="percentComplete+'%'"></div>
+    </div>
+    <div class="progress" *ngIf="isFailed">
+      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="percentComplete"
         aria-valuemin="0" aria-valuemax="100" [style.width]="percentComplete+'%'"></div>
     </div>
     <img class="loading" *ngIf="inProgress" src="assets/img/load.gif" alt="loading...">
@@ -121,11 +137,11 @@
         <td>Properties File Path</td>
         <td>{{result.propertiesFilePath}}</td>
       </tr> -->
-      <!-- <tr>
+  <!-- <tr>
               <td>Properties To Update</td>
               <td>{{result.propertiesToUpdate}}</td>
             </tr> -->
-      <!-- <tr>
+  <!-- <tr>
         <td>Commit Message</td>
         <td>{{result.commitMessage}}</td>
       </tr>
