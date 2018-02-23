@@ -1,6 +1,7 @@
 export * from './cmdInfo';
 export * from './TCIBProvisionModel';
 export * from './TCIBDeployModel';
+export * from './TapPackageModel';
 export * from './JobStatusNotificationModel';
 
 export class CheckMobileNumber {

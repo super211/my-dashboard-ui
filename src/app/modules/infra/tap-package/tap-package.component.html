@@ -4,13 +4,15 @@
   
   <div class="main">
     <div class="well">
-      <h2>Package Component <span *ngIf="tcibProvisionModel.selectedComponent">: {{tcibProvisionModel.selectedComponent | uppercase}}</span></h2>
+      <!-- <h2>Package Component <span *ngIf="tcibProvisionModel.selectedComponent">: {{tcibProvisionModel.selectedComponent | uppercase}}</span></h2> -->
+      <h2>Package Component <span *ngIf="showSubmitButton()">: {{tcibProvisionModel.selectedComponent | uppercase}}</span></h2>
     </div>
   
     <div class="form-group">
       <label for="selectedComponent">Component Name</label>
       <select class="form-control" id="selectedComponent" name="selectedComponent" [(ngModel)] = "tcibProvisionModel.selectedComponent"
         (change) = "loadBranchNames($event)">
+        <option value="-1" selected disabled>Please select the component name</option>
         <option *ngFor = "let componentName of componentNames" [value]="componentName">{{componentName | uppercase }}</option>
       </select>
     </div>
@@ -18,11 +20,13 @@
     <div class="form-group">
       <label for="selectedBranch">Branch Name</label>
       <select class="form-control" id="selectedBranch" name="selectedBranch" [(ngModel)] = "tcibProvisionModel.selectedBranch">
+        <option value="-1" disabled>Please select the branch name</option>
         <option *ngFor="let branchName of branchNames" [value]="branchName"> {{branchName}}</option>
       </select>
     </div> 
   
-    <div class="form-group" id="tapTcibPackageSubmit" *ngIf="tcibProvisionModel.selectedComponent && tcibProvisionModel.selectedBranch  ">
+    <!-- <div class="form-group" id="tapTcibPackageSubmit" *ngIf="tcibProvisionModel.selectedComponent && tcibProvisionModel.selectedBranch  "> -->
+    <div class="form-group" id="tapTcibPackageSubmit" *ngIf="showSubmitButton()">
       <label for="submit"></label>
       <button type="sbumit" class="btn btn-primary" (click)="doSubmit()">Package {{tcibProvisionModel.selectedComponent}}</button>
     </div>
