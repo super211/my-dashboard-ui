@@ -67,3 +67,72 @@
     </div>
   </div>
 </form>
+
+
+<div class="row container">
+  <div class="col-sm-12">
+    <div class="progress" *ngIf="inProgress">
+      <div class="progress-bar bg-success progress-bar-tripped progress-bar-animated" role="progressbar" aria-valuenow="percentComplete"
+        aria-valuemin="0" aria-valuemax="100" [style.width]="percentComplete+'%'"></div>
+    </div>
+    <img class="loading" *ngIf="inProgress" src="assets/img/load.gif" alt="loading...">
+  </div>
+
+  <div class="row col-sm-12" *ngIf="result != null">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>LOG</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{result | json }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Response Field</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Exit Code</td>
+        <td>{{result.exitCode}}</td>
+      </tr>
+      <tr>
+        <td>Success Log</td>
+        <td>{{result.successLog}}</td>
+      </tr>
+      <tr>
+        <td>Error Log</td>
+        <td>{{result.errorLog}}</td>
+      </tr>
+      <tr>
+        <td>Status Text</td>
+        <td>{{result.statusText}}</td>
+      </tr>
+      <tr>
+        <td>Properties File Path</td>
+        <td>{{result.propertiesFilePath}}</td>
+      </tr> -->
+      <!-- <tr>
+              <td>Properties To Update</td>
+              <td>{{result.propertiesToUpdate}}</td>
+            </tr> -->
+      <!-- <tr>
+        <td>Commit Message</td>
+        <td>{{result.commitMessage}}</td>
+      </tr>
+      <tr>
+        <td>Properties To Update</td>
+        <td>{{result.propertiesToUpdate[0]}}</td>
+      </tr>
+    </tbody>
+  </table> -->
+</div>
